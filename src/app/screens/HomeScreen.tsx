@@ -27,7 +27,6 @@ export function HomeScreen() {
     const [inputFocused, setInputFocused] = useState(false);
     const [showRichPicker, setShowRichPicker] = useState(false);
     const [richSearch, setRichSearch] = useState('');
-    const [mascotClicked, setMascotClicked] = useState(false);
 
     // Real-time mascot mood based on amount
     const mood = useMascotMood(amount, { inputFocused });
@@ -100,8 +99,7 @@ export function HomeScreen() {
 
     const handleMascotClick = useCallback(() => {
         SoundManager.play('pop');
-        setMascotClicked(true);
-        setTimeout(() => setMascotClicked(false), 300);
+        // Mascot click animation handled by component itself
     }, []);
 
     const handleAmountChange = useCallback((newAmount: number) => {

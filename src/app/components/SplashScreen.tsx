@@ -7,7 +7,7 @@ export function SplashScreen() {
             <div className="animate-bounce">
                 <CheneMascot
                     mood="richMode"
-                    humorLevel="moderate"
+                    humorLevel="mid"
                     showBubble={false}
                     size="lg"
                 />
