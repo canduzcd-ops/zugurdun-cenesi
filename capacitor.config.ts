@@ -8,6 +8,23 @@ const config: CapacitorConfig = {
         androidScheme: 'https',
     },
     plugins: {
+        SplashScreen: {
+            launchShowDuration: 2000,
+            launchAutoHide: true,
+            backgroundColor: "#FFFBEB",
+            androidScaleType: "CENTER_CROP",
+            showSpinner: false,
+            androidSpinnerStyle: "large",
+            iosSpinnerStyle: "small",
+            spinnerColor: "#7C3AED",
+            splashFullScreen: true,
+            splashImmersive: true,
+        },
+        Keyboard: {
+            resize: "body",
+            style: "dark",
+            resizeOnFullScreen: true,
+        },
         Share: {
             // No additional configuration needed
         },
@@ -16,11 +33,11 @@ const config: CapacitorConfig = {
         },
     },
     android: {
-        backgroundColor: '#0F0F1A',
+        backgroundColor: '#FFFBEB',
         allowMixedContent: false,
     },
     ios: {
-        backgroundColor: '#0F0F1A',
+        backgroundColor: '#FFFBEB',
         contentInset: 'automatic',
         scrollEnabled: true,
     },
