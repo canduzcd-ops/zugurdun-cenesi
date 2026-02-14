@@ -1,0 +1,37 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build cache
+.vite
+.turbo
+
+# Logs
+*.log
+
+# Environment
+.env*.local
+
+# IDE
+.vscode
+.idea
+
+# Testing
+coverage
+.nyc_output
+
+# Android/iOS (Capacitor - Vercel'de gerekmez)
+android
+ios
+
+# Docs (opsiyonel, boyut azaltmak için)
+docs
+specs
+
+# Git
+.git
+.gitignore
+
+# Temp
+*.tmp
+.DS_Store

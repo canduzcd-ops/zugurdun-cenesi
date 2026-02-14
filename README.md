@@ -8,6 +8,8 @@ Herhangi bir para miktarıyla neler alınabileceğini hesaplayan eğlenceli bir 
 ![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android-green)
 ![License](https://img.shields.io/badge/license-Proprietary-red)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/canduzcd-ops/zugurdun-cenesi)
+
 ## 🎯 Özellikler
 
 - 💰 **Para Hesaplama**: Girin, hesaplayın, kaç ev/araba/döner alınır görün
