@@ -1,0 +1,1 @@
+export { CheneMascot } from './CheneMascot';

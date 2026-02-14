@@ -1,0 +1,28 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hard Shadow (Neo-Brutalist offset) -->
+  <rect x="18" y="18" width="64" height="64" rx="0" fill="#000000" opacity="0.3"/>
+  
+  <!-- Head - Square shape (Neo-Brutalist) -->
+  <rect x="15" y="15" width="64" height="64" rx="0" fill="#FCD34D" stroke="#000000" stroke-width="4"/>
+  
+  <!-- Left Eye - Square -->
+  <g transform="translate(32, 35) scale(1)">
+    <rect x="-8" y="-8" width="16" height="16" rx="0" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+    <circle cx="0" cy="0" r="4" fill="#000000"/>
+  </g>
+  
+  <!-- Right Eye - Square -->
+  <g transform="translate(62, 35) scale(1)">
+    <rect x="-8" y="-8" width="16" height="16" rx="0" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+    <circle cx="0" cy="0" r="4" fill="#000000"/>
+  </g>
+  
+  <!-- Mouth - Happy smile -->
+  <path d="M 28 58 Q 50 70, 72 58" stroke="#000000" stroke-width="4" stroke-linecap="square" fill="none"/>
+  
+  <!-- Gold tooth (richMode indicator) -->
+  <rect x="46" y="62" width="8" height="4" rx="0" fill="#FCD34D" stroke="#000000" stroke-width="2"/>
+  
+  <!-- Crown emoji positioned above -->
+  <text x="40" y="8" font-size="16">👑</text>
+</svg>

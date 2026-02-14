@@ -1,0 +1,18 @@
+{
+  "name": "Züğürdün Çenesi",
+  "short_name": "Züğürt",
+  "description": "Parayı yaz, çeneyi çalıştır. Herhangi bir miktarla neler alınabileceğini hesapla.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBEB",
+  "theme_color": "#FFFBEB",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

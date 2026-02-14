@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #7C3AED;
+  --color-accent: #A3E635;
+  --color-surface: #FFFFFF;
+  --color-background: #FFFBEB;
+  --color-text: #000000;
+  --color-border: #000000;
+}
+
+.dark {
+  --color-primary: #A78BFA;
+  --color-accent: #BEF264;
+  --color-surface: #000000;
+  --color-background: #000000;
+  --color-text: #FFFFFF;
+  --color-border: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-weight: 500;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Safe area for mobile devices */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Tab bar fixed at bottom */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-surface);
+  border-top: 3px solid var(--color-border);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  z-index: 50;
+}
+
+/* Main content with bottom padding for tab bar */
+.main-content {
+  flex: 1;
+  padding-bottom: calc(70px + env(safe-area-inset-bottom, 0));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 2px;
+}
+
+/* Input styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .glass {
+  background: rgba(26, 26, 46, 0.8);
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Share receipt styles */
+.share-receipt-canvas {
+  width: 400px;
+  padding: 20px;
+  background: #FFFDF0; /* Thermal paper off-white */
+  color: #111111;
+  font-family: 'Courier New', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}
+
+.share-receipt {
+  position: relative;
+  background: #FEFEFE;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.receipt-zigzag {
+  height: 12px;
+  background-image:
+    linear-gradient(135deg, transparent 75%, #FFFDF0 75%),
+    linear-gradient(225deg, transparent 75%, #FFFDF0 75%);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+  background-repeat: repeat-x;
+}
+
+.receipt-zigzag-bottom {
+  transform: rotate(180deg);
+}
+
+/* Stamp overlay */
+.receipt-stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: rgba(220, 38, 38, 0.15);
+  border: 3px solid rgba(220, 38, 38, 0.15);
+  border-radius: 8px;
+  padding: 12px 24px;
+  pointer-events: none;
+  text-align: center;
+  z-index: 1;
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Barcode */
+.receipt-barcode {
+  width: 180px;
+  height: 40px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #111 0px,
+    #111 2px,
+    transparent 2px,
+    transparent 3px,
+    #111 3px,
+    #111 4px,
+    transparent 4px,
+    transparent 6px,
+    #111 6px,
+    #111 8px,
+    transparent 8px,
+    transparent 9px,
+    #111 9px,
+    #111 11px,
+    transparent 11px,
+    transparent 13px
+  );
+  border: 1px solid #d1d5db;
+  border-radius: 2px;
+}
